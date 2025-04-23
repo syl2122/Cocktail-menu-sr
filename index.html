@@ -63,7 +63,7 @@
     .card-inner {
       position: relative;
       width: 100%;
-      height: 320px;
+      height: 400px;
       text-align: center;
       transition: transform 0.8s;
       transform-style: preserve-3d;
@@ -93,11 +93,13 @@
     }
     .card-back h3 {
       margin-top: 0;
+      font-size: 1.2rem;
     }
     .card-back ul {
       padding-left: 15px;
       text-align: left;
       margin-bottom: 10px;
+      font-size: 0.95rem;
     }
     .tips {
       font-size: 0.9em;
@@ -114,19 +116,18 @@
   <div class="cocktail-grid" id="cocktailGrid"></div>  <script>
     const categories = ["All", "Martinis", "Mules", "Shots", "Tropical", "Creamy"];
     const cocktails = [
-      { name: "Espresso Baileys Martini", category: "Martinis", ingredients: ["Vodka: 45ml", "Coffee: 30ml", "Baileys: 30ml", "Vanilla Syrup: 10ml"], tips: "Serve in a chilled martini glass. Garnish with 3 coffee beans.", image: "https://source.unsplash.com/featured/?espresso,martini" },
-      { name: "Milkshake Vanilla Martini", category: "Creamy", ingredients: ["Vodka: 45ml", "Baileys: 30ml", "Coconut Purée: 30ml", "Caramel Syrup: 5ml"], tips: "Top with whipped cream or toasted coconut.", image: "https://source.unsplash.com/featured/?vanilla,martini" },
-      { name: "Pornstar Martini", category: "Martinis", ingredients: ["Vodka: 45ml", "Passionfruit Purée: 30ml", "Vanilla Syrup: 15ml", "Lime Juice: 10ml"], tips: "Serve with a Prosecco shot on the side.", image: "https://source.unsplash.com/featured/?passionfruit,martini" },
-      { name: "Moscow Mule", category: "Mules", ingredients: ["Vodka: 45ml", "Ginger Beer: Top", "Lemon Juice: 15ml"], tips: "Serve in a copper mug with a lemon wheel.", image: "https://source.unsplash.com/featured/?moscow,mule" },
-      { name: "London Mule", category: "Mules", ingredients: ["Gin: 45ml", "Ginger Beer: Top", "Lime Juice: 15ml"], tips: "Serve in a copper mug with lime wedge and mint.", image: "https://source.unsplash.com/featured/?london,mule" },
-      { name: "Mexican Mule", category: "Mules", ingredients: ["Tequila: 45ml", "Ginger Beer: Top", "Lime Juice: 15ml"], tips: "Add a chili rim for extra kick.", image: "https://source.unsplash.com/featured/?mexican,mule" },
-      { name: "Caribbean Mule", category: "Mules", ingredients: ["Rum: 45ml", "Ginger Beer: Top", "Lime Juice: 15ml"], tips: "Garnish with pineapple and mint.", image: "https://source.unsplash.com/featured/?caribbean,mule" },
-      { name: "Spicy Mule", category: "Mules", ingredients: ["Vodka: 45ml", "Chili: 2 slices", "Lime Juice: 15ml", "Ginger Beer: Top"], tips: "Muddle chili with lime for spicier kick.", image: "https://source.unsplash.com/featured/?spicy,drink" },
-      { name: "Lychee Martini", category: "Martinis", ingredients: ["Vodka: 45ml", "Lychee Juice: 30ml", "Lime Juice: 10ml"], tips: "Garnish with a skewered lychee.", image: "https://source.unsplash.com/featured/?lychee,martini" },
-      { name: "Passionfruit Martini", category: "Martinis", ingredients: ["Vodka: 45ml", "Passionfruit Purée: 30ml", "Vanilla Syrup: 15ml", "Lime Juice: 10ml"], tips: "Float a half passionfruit on top.", image: "https://source.unsplash.com/featured/?tropical,martini" },
-      { name: "White Russian", category: "Creamy", ingredients: ["Vodka: 45ml", "Coffee Liqueur: 30ml", "Cream: 30ml"], tips: "Float cream for a dramatic swirl.", image: "https://source.unsplash.com/featured/?white,russian" },
-      { name: "Blue Lagoon", category: "Tropical", ingredients: ["Vodka: 40ml", "Blue Curaçao: 20ml", "Lemonade: 40ml"], tips: "Serve over crushed ice with an orange slice.", image: "https://source.unsplash.com/featured/?blue,cocktail" },
-      { name: "Mai Tai", category: "Tropical", ingredients: ["White Rum: 30ml", "Dark Rum: 30ml", "Orange Curaçao: 15ml", "Lime Juice: 20ml", "Orgeat: 10ml"], tips: "Garnish with mint and pineapple wedge.", image: "https://source.unsplash.com/featured/?mai,tai" },
+      { name: "Lychee Martini", category: "Martinis", ingredients: ["Vodka: 45ml", "Lychee Juice: 30ml", "Lime Juice: 10ml"], tips: "Garnish with a skewered lychee.", image: "A_high-resolution_digital_photograph_showcases_a_L.png" },
+      { name: "White Russian", category: "Creamy", ingredients: ["Vodka: 45ml", "Coffee Liqueur: 30ml", "Cream: 30ml"], tips: "Float cream for a dramatic swirl.", image: "A_high-resolution_photograph_captures_a_White_Russ.png" },
+      { name: "Blue Lagoon", category: "Tropical", ingredients: ["Vodka: 40ml", "Blue Curaçao: 20ml", "Lemonade: 40ml"], tips: "Serve over crushed ice with an orange slice.", image: "A_high-resolution_photograph_captures_a_Blue_Lagoo.png" },
+      { name: "Pornstar Martini", category: "Martinis", ingredients: ["Vodka: 45ml", "Passionfruit Purée: 30ml", "Vanilla Syrup: 15ml", "Lime Juice: 10ml"], tips: "Float a half passionfruit on top.", image: "A_high-resolution_photograph_showcases_a_Passionfr.png" },
+      { name: "Mai Tai", category: "Tropical", ingredients: ["White Rum: 30ml", "Dark Rum: 30ml", "Orange Curaçao: 15ml", "Lime Juice: 20ml", "Orgeat: 10ml"], tips: "Garnish with mint and pineapple wedge.", image: "A_high-resolution_photograph_features_a_Mai_Tai_co.png" },
+      { name: "Milkshake Vanilla Martini", category: "Creamy", ingredients: ["Vodka: 45ml", "Baileys: 30ml", "Coconut Purée: 30ml", "Caramel Syrup: 5ml"], tips: "Top with cinnamon powder or vanilla bean.", image: "A_photograph_showcases_a_creamy_vanilla_martini_in.png" },
+      { name: "Sex on the Beach", category: "Tropical", ingredients: ["Vodka: 40ml", "Peach Schnapps: 20ml", "Cranberry Juice: 40ml", "Orange Juice: 40ml"], tips: "Serve with an orange slice and cherry.", image: "A_high-resolution_photograph_features_a_Sex_on_the.png" },
+      { name: "London Mule", category: "Mules", ingredients: ["Gin: 45ml", "Ginger Beer: Top", "Lime Juice: 15ml"], tips: "Serve in a copper mug with lime wedge and mint.", image: "A_photograph_taken_in_the_late_afternoon_or_early_.png" },
+      { name: "Mexican Mule", category: "Mules", ingredients: ["Tequila: 45ml", "Ginger Beer: Top", "Lime Juice: 15ml"], tips: "Add a chili rim for extra kick.", image: "A_high-resolution_photograph_captures_a_Mexican_Mu.png" },
+      { name: "Caribbean Mule", category: "Mules", ingredients: ["Rum: 45ml", "Ginger Beer: Top", "Lime Juice: 15ml"], tips: "Garnish with pineapple and mint.", image: "A_photograph_captures_a_Caribbean_Mule_cocktail_an.png" },
+      { name: "Spicy Mule", category: "Mules", ingredients: ["Vodka: 45ml", "Chili: 2 slices", "Lime Juice: 15ml", "Ginger Beer: Top"], tips: "Muddle chili with lime for spicier kick.", image: "A_high-resolution_photograph_showcases_a_Spicy_Mul.png" },
+      { name: "Moscow Mule", category: "Mules", ingredients: ["Vodka: 45ml", "Ginger Beer: Top", "Lime Juice: 15ml"], tips: "Serve in a copper mug with lime wheel.", image: "A_photograph_taken_in_the_late_afternoon_or_early_.png" }
     ];
 
     const tabsContainer = document.getElementById("tabs");
